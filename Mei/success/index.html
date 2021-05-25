@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css" /><!--CSS RESET-->
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css"><!--演示页面样式，使用时可以不引用-->
+	<link rel="stylesheet" href="../index/css/style.css">
+	<style type="text/css">
+		*{margin:0px;padding:0px;}
+		body{height:100%;}
+	</style>
+<title>Happy Birthday MyGirl</title>
+</head>
+<script src="./css/jquery.min.js"></script>
+<body style='overflow-x: hidden;overflow-y: hidden;text-align: center;background-image: url(img/background.jpg);'>
+	<div class="htmleaf-container" id="hideDiv" style="position: fixed;height: 100%;width: 100%;font-size: 30px;color: white;font-weight: bold;">
+		<iframe src="cake/index.html" width="100%" height="100%"></iframe>
+	</div>
+	<div id="videoDiv" style="width: 100%;padding-top: 10px;text-align: center;">
+	<video id="sp" autoplay="autoplay"    controlsList="nodownload"  width="62%" onclick="playVideo()">
+	  <source src="./img/video.MP4" type="video/mp4" />
+	</video>
+	</div>
+	<div style="width: 50%;font-weight: bold;color:  #434343;padding-top: 50px;float: left;text-align: center;font-size: 20px;" >
+		<div id="text" ></div>
+	</div>
+	<div style="width: 50%;font-weight: bold;color:  #434343;padding-top: 50px;float: left;text-align: center;font-size: 20px;" >
+		<div id="text2" ></div>
+	</div>
+	<div id="nc-main" class="nc-main bg-cover bg-cc">
+		<div class="full-wh">
+			<div class="bg-animation">
+				<div id='stars'></div>
+				<div id='stars2'></div>
+				<div id='stars3'></div>
+				<div id='stars4'></div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	var video = document.getElementById('sp');
+	function playVideo(){
+		 $("#hideDiv").fadeIn("fast").fadeTo("fast",0);
+		video.play();
+	}
+	$("video").bind("ended", function() {
+		$("#videoDiv").hide();
+		typing();
+	});
+ let divTyping = document.getElementById('text')
+  let divTyping2 = document.getElementById('text2')
+ let i = 0,
+	i2=0,
+   timer = 0,
+   timer2 = 0,
+   spend=150,
+   str =  '宝贝，生日快乐。</br>';
+   str += '我不是那种很会浪漫的人</br>';
+   str += '也不是很懂怎么表达爱</br>';
+   str += '更不会说一些令人感动的话</br>';
+   str += '可每次看到你开心的时候</br>';
+   str += '我也会莫名感到开心</br>';
+   str += '你难过的时候我会心疼</br>';
+   str += '只要关于你的事情</br>';
+   str += '我都很难控制自己的情绪。</br>';
+   str += '在之前的一段日子里</br>';
+   str += '我会因为各种大大小小的事惹你生气</br>';
+   str += '犯了错总是爱找借口</br>';
+   str += '做事粗心把事情搞砸</br>';
+   str += '撒过慌，有时候还很固执</br>';
+   str += '但你总是会包容我原谅我</br>';
+   str += '我一直想不通</br>';
+   str += '为什么我能找到一个这么棒的女朋友。</br>';
+   str += '所以每次我都会暗自下定决心</br>';
+   str += '绝对不会再做出同样的事情让你伤心。</br>';
+   str += '</br>';
+   str += '你经常问我为什么喜欢你</br>';
+   str += '我想了很多地方</br>';
+   str += '比如我喜欢你很可爱</br>';
+   str += '但只有可爱我反而不会如此喜欢</br>';
+   str += '比如也喜欢你调皮</br>';
+   str += '但只有调皮我也不会像这样喜欢</br>';
+   str2 = '宇宙中有成千上万甚至上亿更甚至千亿个星球</br>';
+   str2 += '但目前人们观测到的星球中</br>';
+   str2 += '却总是找不出有哪一个能像地球一样拥有生命</br>';
+   str2 += '因为地球恰好满足了生命所需的一切</br>';
+   str2 += '而你却满足了我喜欢的一切。</br>';
+   str2 += '所以我会珍惜这个像生命诞生的概率一样</br>';
+   str2 += '无限接近于数字零的概率出现的你</br>';
+   str2 += '</br>';
+   str2 += '今天是宝贝的生日,在未来的日子里</br>';
+   str2 += '我希望你能拥有所有的好运气</br>';
+   str2 += '希望你在成熟的同时还能在我这里幼稚</br>';
+   str2 += '需要我的怀抱</br>';
+   str2 += '希望这个世界给我家宝贝所有的美好</br>';
+   str2 += '你的SoSo永远爱你疼你</br>';
+   str2 += '</br>';
+   str2 += '我会两种语言</br>';
+   str2 += '一种写给程序执行</br>';
+   str2 += '一种把爱讲给你听</br>';
+   str2 += '</br>';
+   str2 += '对了 小白兔和礼物在.......</br>';
+   str2 += '亲一口蛋子就告诉你</br>';
+ function typing () {
+   if (i <= str.length) {
+     divTyping.innerHTML = str.slice(0, i++) + '_'
+     timer = setTimeout(typing, spend)
+   }
+   else {
+     divTyping.innerHTML = str//结束打字,移除 _ 光标
+     clearTimeout(timer)
+	 typing2()
+   }
+ }
+ function typing2 () {
+   if (i2 <= str2.length) {
+     divTyping2.innerHTML = str2.slice(0, i2++) + '_'
+     timer2 = setTimeout(typing2, spend)
+   }
+   else {
+     divTyping2.innerHTML = str2//结束打字,移除 _ 光标
+     clearTimeout(timer2)
+   }
+ }
+</script>
+</html>

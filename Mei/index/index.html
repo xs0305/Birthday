@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday MyGirl</title>
+<link rel="stylesheet" href="static/css/style.css">
+<script src="static/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body >
+<div class="container">
+<div id="text" style="font-weight: bold;color: #ebebeb;font-size: 18px;" ></div>
+</div>
+<!-- <button id="ag" style="display: none;"  class="button" onclick="javascrtpt:window.location.href='../theRabbit/index.html'">小可爱才能点的按钮！</button> -->
+<div id="nc-main" class="nc-main bg-cover bg-cc">
+	<div class="full-wh">
+		<div class="bg-animation">
+			<div id='stars'></div>
+			<div id='stars2'></div>
+			<div id='stars3'></div>
+			<div id='stars4'></div>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+  let divTyping = document.getElementById('text')
+  let i = 0,
+    timer = 0,
+	str = '要是能赶快把礼物送到梅梅公主的手里就好了</br>';
+	str += '小免了快步走在去梅梅公主家的路上...</br>';
+	str += '听说那只叫蠢蛋子的大灰狼早就送出了礼物</br>';
+	str += '可是梅梅公主就是不喜欢</br>';
+	str += '我就说嘛，哪有生日还没到就送礼物的</br>';
+	str += '一点都不真诚</br>';
+	str += '公主一定会喜欢我送的礼物的</br>';
+	str += '小免了得意的想着。</br>';
+	str += '</br>';
+	str += '穿过这片森冷就是梅梅公主的家啦</br>';
+	str += '小免了的步伐越来越快</br>';
+	str += '因为它总觉得身后有一个黑影一直跟着它</br>';
+	str += '回头看时却只有零散的几棵松树和崎岖的山路</br>';
+	str += '小免了不安的继续向前加快了步伐</br>';
+	str += '突然!!!</br>';
+  function typing () {
+    if (i <= str.length) {
+      divTyping.innerHTML = str.slice(0, i++) + '_'
+      timer = setTimeout(typing, 150)
+    }else {
+      divTyping.innerHTML = str//结束打字,移除 _ 光标
+      clearTimeout(timer)
+	  /* $("#ag").show(); */
+	   window.location.href='../theRabbit/index.html';
+    }
+  }
+  typing();
+</script>
+</html>

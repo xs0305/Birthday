@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday MyGirl</title>
+<link rel="stylesheet" href="static/css/style.css">
+<script src="static/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body >
+<div class="container">
+<div id="text" style="font-weight: bold;color: #eaeaea;font-size: 18px;" ></div>
+</div>
+<div id="nc-main" class="nc-main bg-cover bg-cc">
+	<div class="full-wh">
+		<div class="bg-animation">
+			<div id='stars'></div>
+			<div id='stars2'></div>
+			<div id='stars3'></div>
+			<div id='stars4'></div>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+  let divTyping = document.getElementById('text')
+  let i = 0,
+    timer = 0,
+    str =  '我是蛋子</br>';
+    str += '这些天我就琢磨</br>';
+	str += '梅梅过生日应该送什么礼物</br>';
+	str += '之前买的项链梅梅一点都不喜欢</br>';
+    str += '刚才看到小免了刚从礼物店走出来</br>';
+    str += '我本想让他帮我出出主意</br>';
+	str += '谁知道这货看见我撒丫子就跑</br>';
+	str += '眼看都要跑到梅梅家了</br>';
+	str += '对不住了小免了!</br>';
+	str += '就让我把你和礼物</br>';
+	str += '一起送给梅梅公主叭!!!</br>';
+	str += '哈哈哈哈哈哈哈哈嗝——</br>';
+  function typing () {
+    if (i <= str.length) {
+      divTyping.innerHTML = str.slice(0, i++) + '_'
+      timer = setTimeout(typing, 150)
+    }else {
+      divTyping.innerHTML = str//结束打字,移除 _ 光标
+      clearTimeout(timer)
+	  window.location.href='../success/index.html';
+    }
+  }
+  typing();
+</script>
+</html>
